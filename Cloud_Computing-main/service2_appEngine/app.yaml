@@ -1,0 +1,13 @@
+runtime: python39
+service: service2manual
+
+# B2 instance for manual scaling
+manual_scaling:  
+  instances: 1 
+  
+
+handlers:
+- url: /.*
+  script: auto
+
+entrypoint: python app.py

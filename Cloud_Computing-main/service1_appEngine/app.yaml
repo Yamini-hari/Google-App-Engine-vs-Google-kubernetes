@@ -1,0 +1,12 @@
+runtime: python39
+service: service1auto
+
+  # F1 instannce is used for automatic scaling
+automatic_scaling:
+  target_cpu_utilization: 0.8  # Set the target CPU utilization to 80%
+
+handlers:
+- url: /.*
+  script: auto
+
+entrypoint: python app.py
